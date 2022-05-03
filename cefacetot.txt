@@ -1,0 +1,16 @@
+- login.js  (NU MAI DATI RUN LA ASTA INPLM =))) ASTA GEN CAM DELOC)
+    Iti trimite un cod pe telefon, tu bagi codu manual, si iti scriae dupaia tokenu unic al contului cu un session cookie in .env, dupaia automat cere si informatii despre zone si trotinetele din apropiere folosind info-u din data.json si le scrie in resp.json si scrie si ET-ID-u de la cea mai apropiata troti in bikeid.json
+
+- getZonesAndBikes.js
+    face ce zice ca face, dar le si scrie in resp.json
+
+- ringBike.js 
+    -suna troti care e salvata in bikeid.json
+
+Deci aparent nu contneaza si shortRangeData raza,doar userlocation
+
+todo : deci satrimiti coordonatele si sa printezi pe server coordonatele trimise de la cine stii cum zic
+
+dupaia dai request la bikes de acolo si scriele in front end licence plateu
+
+intreaba cate vrei sa sune si suna
