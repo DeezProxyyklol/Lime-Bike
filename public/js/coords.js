@@ -14,6 +14,14 @@ async function getBikes( params ) {
     }
   } )
 }
+async function getKanyeQuote() {
+
+  const response = await axios.get( '/kanye' )
+  console.log( `KANYE A ZIS O DATA:` )
+  console.log( response.quote )
+}
+
+
 
 function getLocation() {
   return new Promise( ( resolve, reject ) => {
@@ -52,13 +60,14 @@ function addBikes( bikes ) {
 
 getLocation().then( async res => {
   try {
-    const bikes = await getBikes( {
-      lat: res.latitude,
-      lng: res.longitude
-    } )
-    console.log( `uite kktuiile de date` )
-    console.log( bikes.data )
-    addBikes( bikes.data )
+    getKanyeQuote()
+    // const bikes = await getBikes( {
+    //   lat: res.latitude,
+    //   lng: res.longitude
+    // } )
+    // console.log( `uite kktuiile de date` )
+    // console.log( bikes.data )
+    // addBikes( bikes.data )
   } catch ( e ) {
     console.log( e )
   }

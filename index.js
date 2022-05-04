@@ -22,6 +22,12 @@ app.get( '/coords', async ( req, res ) => {
   // res.json( [ `u suck lol`, req.query ] )
 } )
 
+app.get( '/kanye', async ( req, res ) => {
+  console.log( `Un kan head aici` )
+  const qoute = await axios.get( 'https://api.kanye.rest' )
+  res.json( qoute.data )
+} )
+
 const PORT = process.env.PORT || 3000
 
 app.listen( PORT, () => {
