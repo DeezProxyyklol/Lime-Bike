@@ -10,6 +10,7 @@ async function getBikes( params ) {
       resolve( response )
     } catch ( e ) {
       reject( e )
+
     }
   } )
 }
@@ -56,8 +57,8 @@ getLocation().then( async res => {
       lng: res.longitude
     } )
     console.log( `uite kktuiile de date` )
-    console.log( bikes )
-    // addBikes( bikes.data )
+    console.log( bikes.data )
+    addBikes( bikes.data )
   } catch ( e ) {
     console.log( e )
   }
