@@ -2,8 +2,8 @@ const express = require( 'express' )
 const {
   getClosestBikes
 } = require( './exec/getZonesAndBikes' )
+const axios = require( 'axios' )
 const app = express()
-
 app.use( express.static( 'public' ) )
 
 app.set( 'view engine', 'ejs' )
@@ -25,6 +25,7 @@ app.get( '/coords', async ( req, res ) => {
 app.get( '/kanye', async ( req, res ) => {
   console.log( `Un kan head aici` )
   const qoute = await axios.get( 'https://api.kanye.rest' )
+  console.log( qoute.data )
   res.json( qoute.data )
 } )
 

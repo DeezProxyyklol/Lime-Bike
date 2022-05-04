@@ -1,6 +1,5 @@
 const show = document.querySelector( '#show' )
 const bikeList = document.querySelector( '#bikeList' )
-const axios = require( 'axios' )
 
 async function getBikes( params ) {
   return new Promise( async ( resolve, reject ) => {
@@ -16,13 +15,10 @@ async function getBikes( params ) {
   } )
 }
 async function getKanyeQuote() {
-
   const response = await axios.get( '/kanye' )
   console.log( `KANYE A ZIS O DATA:` )
-  console.log( response.quote )
+  console.log( response.data )
 }
-
-
 
 function getLocation() {
   return new Promise( ( resolve, reject ) => {
