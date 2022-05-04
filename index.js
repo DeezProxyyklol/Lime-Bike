@@ -16,9 +16,10 @@ app.get( '/', ( req, res ) => {
 app.get( '/coords', async ( req, res ) => {
   console.log( `Uite coordonatele la un prost sa-i dai ddos:` )
   console.log( req.query )
-  const bikes = await getClosestBikes( req.query.lat, req.query.lng )
-  console.log( bikes )
-  res.json( bikes )
+  // const bikes = await getClosestBikes( req.query.lat, req.query.lng )
+  // console.log( bikes )
+  // res.json( bikes )
+  res.json( [ `u suck lol`, req.query ] )
 } )
 
 const PORT = process.env.PORT || 3000

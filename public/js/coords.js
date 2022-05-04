@@ -50,10 +50,16 @@ function addBikes( bikes ) {
 }
 
 getLocation().then( async res => {
-  const bikes = await getBikes( {
-    lat: res.latitude,
-    lng: res.longitude
-  } )
-  addBikes( bikes.data )
-  console.log( bikes.data )
+  try {
+    const bikes = await getBikes( {
+      lat: res.latitude,
+      lng: res.longitude
+    } )
+    console.log( `uite kktuiile de date` )
+    console.log( bikes )
+    // addBikes( bikes.data )
+  } catch ( e ) {
+    console.log( e )
+  }
+
 } )
