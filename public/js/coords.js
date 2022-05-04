@@ -57,14 +57,14 @@ function addBikes( bikes ) {
 
 getLocation().then( async res => {
   try {
-    getKanyeQuote()
-    // const bikes = await getBikes( {
-    //   lat: res.latitude,
-    //   lng: res.longitude
-    // } )
-    // console.log( `uite kktuiile de date` )
-    // console.log( bikes.data )
-    // addBikes( bikes.data )
+    // getKanyeQuote()
+    const bikes = await getBikes( {
+      lat: res.latitude,
+      lng: res.longitude
+    } )
+    console.log( `uite kktuiile de date` )
+    console.log( bikes.data )
+    addBikes( bikes.data )
   } catch ( e ) {
     console.log( e )
   }

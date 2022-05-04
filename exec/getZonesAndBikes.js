@@ -1,6 +1,5 @@
 const axios = require( 'axios' )
 const mapData = require( '../data/data.json' )
-
 const fs = require( 'fs' )
 const readline = require( 'readline' )
 const rl = readline.createInterface( {
@@ -42,8 +41,8 @@ async function getVehiclesAndZones( data, token, cookie ) {
     } )
     console.log( 'Am datele in get zones' )
     try {
-      writeToRespFile( res.data )
-      updateCookie( res.headers[ 'set-cookie' ][ 1 ] )
+      // writeToRespFile( res.data )
+      // updateCookie( res.headers[ 'set-cookie' ][ 1 ] )
       const bikes = res.data.data.attributes.bikes
       return new Promise( resolve => {
         resolve( bikes )
@@ -59,8 +58,8 @@ async function getVehiclesAndZones( data, token, cookie ) {
   } catch ( err ) {
     console.log( `Ceva nu-i ok in get zones` )
     console.log( err )
-    writeToErrorFile( err )
-    updateCookie( err.response.headers[ 'set-cookie' ][ 0 ] )
+    // writeToErrorFile( err )
+    // updateCookie( err.response.headers[ 'set-cookie' ][ 0 ] )
   }
 }
 
@@ -72,9 +71,10 @@ function ask() {
     mapData.user_longitude = parseFloat( coords[ 1 ] )
     getCorners( mapData )
     getVehiclesAndZones( mapData, TOKEN, COOKIE )
-    logShit()
+    // logShit()
   } )
 }
+
 //fa patrat in jurul userului
 function getCorners( mapData ) {
   mapData.ne_lat = mapData.user_latitude + 0.003
@@ -106,7 +106,7 @@ async function getClosestBikes( lat, lng ) {
   mapData.user_latitude = lat
   mapData.user_longitude = lng
   getCorners( mapData )
-  logShit()
+  // logShit()
   return new Promise( async ( resolve, reject ) => {
     try {
       const bikes = await getVehiclesAndZones( mapData, TOKEN, COOKIE )
