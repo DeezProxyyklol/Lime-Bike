@@ -1,4 +1,9 @@
 node_modules
+/data
+./env.json
 
-
-.vercel
+env.json
+data/shortRangedata.json
+data/resp.json
+data/data.json
+data/bikeids.json

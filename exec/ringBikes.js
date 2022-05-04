@@ -1,6 +1,6 @@
 const bikes = require( '../data/bikeids.json' )
 const ringBike = require( './ringBike' )
-const last15 = require( '../data/last15bikesbackwards.json' )
+// const last15 = require( '../data/last15bikesbackwards.json' )
 const readline = require( 'readline' )
 const {
   writeToErrorFile
@@ -39,5 +39,7 @@ async function doThething() {
 }
 
 doThething()
+
+
 
 module.exports = ringBikes
