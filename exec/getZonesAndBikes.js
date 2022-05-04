@@ -16,12 +16,7 @@ const {
   writeToErrorFile,
   writeToRespFile
 } = require( '../exports' )
-const {
-  contentDisposition
-} = require( 'express/lib/utils' )
-const {
-  response
-} = require( 'express' )
+
 
 const baseurl = 'https://web-production.lime.bike/api/rider/'
 const map = 'v1/views/map'

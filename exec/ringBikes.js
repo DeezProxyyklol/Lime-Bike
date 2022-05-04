@@ -7,7 +7,8 @@ const {
 } = require( '../exports' )
 const rl = readline.createInterface( {
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
+  terminal: false
 } )
 
 async function ringBikes( bikesArray, n ) {
@@ -32,13 +33,15 @@ async function ringBikes( bikesArray, n ) {
   rl.close()
 }
 
-async function doThething() {
+function doThething() {
   rl.question( `Cate troti vrei sa suni boossu?\n`, async nr => {
     ringBikes( bikes, nr )
   } )
 }
 
 doThething()
+
+
 
 
 

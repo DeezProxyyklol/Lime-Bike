@@ -4,7 +4,11 @@ const {
 } = require( './exec/getZonesAndBikes' )
 const axios = require( 'axios' )
 const app = express()
+const cors = require( 'cors' )
 app.use( express.static( 'public' ) )
+app.use( cors( {
+  origin: "*"
+} ) )
 
 app.set( 'view engine', 'ejs' )
 app.set( 'views', 'views' )
