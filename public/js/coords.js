@@ -1,5 +1,6 @@
 const show = document.querySelector( '#show' )
 const bikeList = document.querySelector( '#bikeList' )
+const axios = require( 'axios' )
 
 async function getBikes( params ) {
   return new Promise( async ( resolve, reject ) => {
